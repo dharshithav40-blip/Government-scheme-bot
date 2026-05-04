@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Scholarship Scheme",
+    "category": "student",
+    "income_limit": 200000
+  },
+  {
+    "name": "Farmer Support Scheme",
+    "category": "farmer",
+    "income_limit": 300000
+  },
+  {
+    "name": "Women Welfare Scheme",
+    "category": "female",
+    "income_limit": 250000
+  }
+]

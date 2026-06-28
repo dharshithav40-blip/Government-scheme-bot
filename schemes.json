@@ -2,16 +2,35 @@
   {
     "name": "Scholarship Scheme",
     "category": "student",
-    "income_limit": 200000
+    "benefits": "Financial support for students",
+    "source": "Government Portal"
   },
+
   {
     "name": "Farmer Support Scheme",
     "category": "farmer",
-    "income_limit": 300000
+    "benefits": "Financial and agricultural support for farmers",
+    "source": "Government Portal"
   },
+
   {
     "name": "Women Welfare Scheme",
     "category": "female",
-    "income_limit": 250000
+    "benefits": "Support and welfare benefits for women",
+    "source": "Government Portal"
+  },
+
+  {
+    "name": "Senior Citizen Pension Scheme",
+    "category": "senior citizen",
+    "benefits": "Monthly pension support for senior citizens",
+    "source": "Government Portal"
+  },
+
+  {
+    "name": "Education Loan Scheme",
+    "category": "education",
+    "benefits": "Educational loan support for higher studies",
+    "source": "Government Portal"
   }
 ]

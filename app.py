@@ -1,5 +1,6 @@
 from flask import Flask, request
 import json
+import webbrowser
 
 app = Flask(__name__)
 
@@ -33,4 +34,6 @@ def result():
     else:
         return "No scheme found"
 
-app.run(debug=True)
+if __name__ == "__main__":
+    webbrowser.open("http://127.0.0.1:5000")
+    app.run(debug=True)

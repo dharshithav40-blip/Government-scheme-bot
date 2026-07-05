@@ -2,35 +2,100 @@
   {
     "name": "Scholarship Scheme",
     "category": "student",
-    "benefits": "Financial support for students",
-    "source": "Government Portal"
+    "income_limit": 250000,
+    "benefits": "Financial support up to Rs.10,000/year covering tuition fees, books, and exam fees.",
+    "eligibility": "Students with family income below Rs.2.5 lakhs per year",
+    "how_to_apply": "Apply online at scholarships.gov.in or visit District Education Office",
+    "source": "Ministry of Education - scholarships.gov.in"
   },
-
+  {
+    "name": "PM Kisan Samman Nidhi",
+    "category": "farmer",
+    "income_limit": 600000,
+    "benefits": "Direct income support of Rs.6,000/year in three installments of Rs.2,000 directly to bank account.",
+    "eligibility": "Small and marginal farmers with landholding up to 2 hectares",
+    "how_to_apply": "Register at pmkisan.gov.in or through Common Service Centre (CSC)",
+    "source": "Ministry of Agriculture - pmkisan.gov.in"
+  },
   {
     "name": "Farmer Support Scheme",
     "category": "farmer",
-    "benefits": "Financial and agricultural support for farmers",
-    "source": "Government Portal"
+    "income_limit": 500000,
+    "benefits": "Subsidized seeds, fertilizers, and crop insurance for registered farmers.",
+    "eligibility": "All registered farmers with valid land records",
+    "how_to_apply": "Visit nearest Agriculture Department office or apply at agri.gov.in",
+    "source": "Ministry of Agriculture - agri.gov.in"
   },
-
   {
     "name": "Women Welfare Scheme",
     "category": "female",
-    "benefits": "Support and welfare benefits for women",
-    "source": "Government Portal"
+    "income_limit": 300000,
+    "benefits": "Free skill training, health check-ups, and financial assistance for women entrepreneurs.",
+    "eligibility": "Women above 18 years with family income below Rs.3 lakhs per year",
+    "how_to_apply": "Apply at wcd.nic.in or visit Women and Child Development office",
+    "source": "Ministry of Women and Child Development - wcd.nic.in"
   },
-
+  {
+    "name": "PM Matru Vandana Yojana",
+    "category": "female",
+    "income_limit": 800000,
+    "benefits": "Maternity benefit of Rs.5,000 in three installments for first living child.",
+    "eligibility": "Pregnant and lactating women aged 19 years and above for first living child",
+    "how_to_apply": "Register at Anganwadi Centre or pmmvy-cas.nic.in",
+    "source": "Ministry of Women and Child Development - pmmvy-cas.nic.in"
+  },
   {
     "name": "Senior Citizen Pension Scheme",
     "category": "senior citizen",
-    "benefits": "Monthly pension support for senior citizens",
-    "source": "Government Portal"
+    "income_limit": 100000,
+    "benefits": "Monthly pension of Rs.200-Rs.500 per month for senior citizens below poverty line.",
+    "eligibility": "Senior citizens aged 60 years and above from BPL households",
+    "how_to_apply": "Apply through Gram Panchayat or Urban Local Body office",
+    "source": "Ministry of Rural Development - nsap.nic.in"
   },
-
   {
     "name": "Education Loan Scheme",
     "category": "education",
-    "benefits": "Educational loan support for higher studies",
-    "source": "Government Portal"
+    "income_limit": 450000,
+    "benefits": "Collateral-free education loans up to Rs.7.5 lakhs for higher studies in India and abroad.",
+    "eligibility": "Students who secured admission in recognized institutions through merit-based selection",
+    "how_to_apply": "Apply at any nationalized bank or through vidyalakshmi.co.in",
+    "source": "Ministry of Finance - vidyalakshmi.co.in"
+  },
+  {
+    "name": "PM Awas Yojana",
+    "category": "housing",
+    "income_limit": 1800000,
+    "benefits": "Housing subsidy up to Rs.2.67 lakhs on home loans for EWS and LIG families.",
+    "eligibility": "EWS/LIG/MIG families who do not own a pucca house anywhere in India",
+    "how_to_apply": "Apply at pmaymis.gov.in or through registered bank or housing finance company",
+    "source": "Ministry of Housing - pmaymis.gov.in"
+  },
+  {
+    "name": "Ayushman Bharat PM-JAY",
+    "category": "health",
+    "income_limit": 500000,
+    "benefits": "Health coverage of Rs.5 lakhs per family per year for hospitalization at empanelled hospitals.",
+    "eligibility": "Families listed in SECC 2011 database; covers 10.74 crore vulnerable families",
+    "how_to_apply": "Check eligibility at pmjay.gov.in or visit any empanelled hospital Ayushman Mitra",
+    "source": "National Health Authority - pmjay.gov.in"
+  },
+  {
+    "name": "Skill India PMKVY",
+    "category": "skill",
+    "income_limit": 500000,
+    "benefits": "Free skill training with monetary reward of Rs.8,000 on completion and industry-recognized certification.",
+    "eligibility": "Indian nationals aged 15-45 years who are school/college dropouts or unemployed",
+    "how_to_apply": "Register at pmkvyofficial.org or visit a PMKVY training centre",
+    "source": "Ministry of Skill Development - pmkvyofficial.org"
+  },
+  {
+    "name": "Startup India Seed Fund",
+    "category": "startup",
+    "income_limit": 99999999,
+    "benefits": "Financial assistance up to Rs.20 lakhs for proof-of-concept and Rs.50 lakhs for market entry.",
+    "eligibility": "DPIIT-recognized startups incorporated less than 2 years ago with innovative solution",
+    "how_to_apply": "Apply at startupindia.gov.in through the Startup India hub portal",
+    "source": "DPIIT - startupindia.gov.in"
   }
 ]

@@ -1,38 +1,48 @@
-from flask import Flask, request
+# ─────────────────────────────────────────────────────────────
+#  app.py  –  Flask Web App  |  Government Scheme Bot v2.0
+#  Run  :  python app.py
+#  Open :  http://127.0.0.1:5000
+# ─────────────────────────────────────────────────────────────
+
+from flask import Flask, request, render_template
 import json
 import webbrowser
 
 app = Flask(__name__)
 
-with open('schemes.json') as f:
+# Load schemes data
+with open("schemes.json", encoding="utf-8") as f:
     schemes = json.load(f)
 
-@app.route('/')
+
+
+@app.route("/")
 def home():
-    return '''
-    <h2>Government Scheme Bot</h2>
-    <form method="post" action="/result">
-        Category: <input name="type"><br><br>
-        Income: <input name="income"><br><br>
-        <button type="submit">Find</button>
-    </form>
-    '''
+    return render_template("index.html")
 
-@app.route('/result', methods=['POST'])
+
+
+@app.route("/result", methods=["POST"])
 def result():
-    user_type = request.form['type']
-    income = int(request.form['income'])
+    user_type = request.form.get("type", "").strip().lower()
+    income_raw = request.form.get("income", "0").strip()
 
-    result = []
+    # Validate income input
+    try:
+        income = int(income_raw)
+    except ValueError:
+        income = 0
 
-    for s in schemes:
-        if s["category"] == user_type and income <= s["income_limit"]:
-            result.append(s["name"])
+    # Match schemes by category and income limit
+    matched = [
+        s for s in schemes
+        if s["category"].lower() == user_type
+        and income <= s["income_limit"]
+    ]
 
-    if result:
-        return "<br>".join(result)
-    else:
-        return "No scheme found"
+    return render_template("index.html", results=matched)
+
+
 
 if __name__ == "__main__":
     webbrowser.open("http://127.0.0.1:5000")

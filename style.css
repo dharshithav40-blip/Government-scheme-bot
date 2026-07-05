@@ -1,0 +1,239 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Tokens ── */
+:root {
+  --bg:        #F4F6FB;
+  --white:     #FFFFFF;
+  --panel:     #FFFFFF;
+  --navy:      #1A3A6B;
+  --navy2:     #0F2548;
+  --gold:      #D4820A;
+  --gold-light:#FFF3DC;
+  --green:     #166534;
+  --green-bg:  #DCFCE7;
+  --muted:     #64748B;
+  --border:    #E2E8F0;
+  --text:      #1E293B;
+  --radius:    12px;
+  --shadow:    0 2px 16px rgba(26,58,107,0.08);
+  --shadow-card: 0 1px 4px rgba(26,58,107,0.10);
+}
+
+/* ── Base ── */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  background: var(--navy);
+  padding: 0 32px;
+  position: sticky; top: 0; z-index: 10;
+  box-shadow: 0 2px 12px rgba(15,37,72,0.18);
+}
+.header-inner {
+  display: flex; align-items: center; gap: 16px;
+  max-width: 900px; margin: 0 auto;
+  padding: 14px 0;
+}
+.emblem {
+  width: 46px; height: 46px;
+  background: #FFF3DC;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+  border: 2px solid #D4820A;
+}
+h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.55rem; font-weight: 700; color: #FFFFFF;
+}
+h1 span { color: #F4A900; }
+.subtitle {
+  font-size: .72rem; color: rgba(255,255,255,.65);
+  text-transform: uppercase; letter-spacing: .07em; margin-top: 2px;
+}
+.header-badge {
+  margin-left: auto;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  font-size: .68rem; font-weight: 600;
+  padding: 4px 12px; border-radius: 20px;
+  letter-spacing: .06em; white-space: nowrap;
+}
+
+/* ── Top strip ── */
+.gov-strip {
+  background: #F4A900;
+  text-align: center;
+  padding: 5px 16px;
+  font-size: .72rem; font-weight: 600;
+  color: #0F2548;
+  letter-spacing: .05em;
+}
+
+/* ── Main ── */
+main {
+  flex: 1;
+  max-width: 700px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+/* ── Search Card ── */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--navy); margin-bottom: 6px;
+  letter-spacing: .03em;
+}
+.card-sub {
+  font-size: .8rem; color: var(--muted);
+  margin-bottom: 22px;
+}
+
+/* ── Form ── */
+.field { margin-bottom: 18px; }
+label {
+  display: block;
+  font-size: .75rem; font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase; letter-spacing: .06em;
+  margin-bottom: 7px;
+}
+select, input[type="number"] {
+  width: 100%;
+  padding: 11px 14px;
+  background: #F8FAFC;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+}
+select:focus, input:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(26,58,107,.08);
+  background: #fff;
+}
+select option { background: #fff; color: var(--text); }
+
+.btn-primary {
+  width: 100%; padding: 13px;
+  background: var(--navy);
+  border: none; border-radius: 8px;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.05rem; font-weight: 700;
+  cursor: pointer; letter-spacing: .05em;
+  transition: background .2s, transform .15s;
+  margin-top: 4px;
+}
+.btn-primary:hover { background: var(--navy2); transform: translateY(-1px); }
+
+/* ── Divider ── */
+.divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 28px 0 20px;
+}
+.divider hr { flex: 1; border: none; border-top: 1px solid var(--border); }
+.divider span {
+  font-size: .75rem; font-weight: 600;
+  color: var(--muted); text-transform: uppercase;
+  letter-spacing: .07em; white-space: nowrap;
+}
+
+/* ── Results ── */
+.results-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem; font-weight: 700;
+  color: var(--green); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 6px;
+}
+.scheme-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow .2s, transform .15s;
+}
+.scheme-card:hover {
+  box-shadow: 0 4px 18px rgba(26,58,107,.13);
+  transform: translateY(-2px);
+}
+.scheme-tag {
+  display: inline-block;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  color: var(--navy);
+  font-size: .67rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 20px;
+  text-transform: uppercase; letter-spacing: .07em;
+  margin-bottom: 8px;
+}
+.scheme-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--navy); margin-bottom: 12px;
+}
+.scheme-row {
+  font-size: .82rem; color: #475569;
+  margin-bottom: 7px; line-height: 1.6;
+  display: flex; gap: 8px; align-items: flex-start;
+}
+.scheme-row .label {
+  display: inline-block;
+  background: var(--gold-light);
+  color: var(--gold);
+  font-size: .65rem; font-weight: 700;
+  padding: 2px 8px; border-radius: 4px;
+  text-transform: uppercase; letter-spacing: .04em;
+  white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+}
+
+/* ── No result ── */
+.no-result {
+  background: #FFF7ED;
+  border: 1px solid #FED7AA;
+  border-radius: var(--radius);
+  padding: 28px; text-align: center;
+}
+.no-icon { font-size: 2.2rem; margin-bottom: 10px; }
+.no-result p { color: #92400E; font-size: .9rem; font-weight: 500; }
+.no-result .hint { font-size: .78rem; margin-top: 6px; color: #B45309; }
+
+/* ── Footer ── */
+footer {
+  background: var(--navy);
+  text-align: center;
+  padding: 14px;
+  font-size: .72rem; color: rgba(255,255,255,.5);
+}
+footer span { color: #F4A900; font-weight: 600; }
+
+/* ── Responsive ── */
+@media (max-width: 500px) {
+  .card { padding: 20px 16px; }
+  h1 { font-size: 1.2rem; }
+  .header-badge { display: none; }
+}
